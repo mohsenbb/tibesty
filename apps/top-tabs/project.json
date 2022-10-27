@@ -1,0 +1,92 @@
+{
+  "name": "top-tabs",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/top-tabs/src",
+  "prefix": "tibesty",
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/top-tabs",
+        "index": "apps/top-tabs/src/index.html",
+        "main": "apps/top-tabs/src/main.ts",
+        "polyfills": "apps/top-tabs/src/polyfills.ts",
+        "tsConfig": "apps/top-tabs/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/top-tabs/src/favicon.ico", "apps/top-tabs/src/assets"],
+        "styles": ["apps/top-tabs/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/top-tabs/src/environments/environment.ts",
+              "with": "apps/top-tabs/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "options": {
+        "port": 5200
+      },
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "top-tabs:build:production"
+        },
+        "development": {
+          "browserTarget": "top-tabs:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "top-tabs:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/top-tabs/**/*.ts", "apps/top-tabs/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/top-tabs/jest.config.ts",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}
