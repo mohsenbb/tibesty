@@ -1,1 +1,19 @@
-<tibesty-nx-welcome></tibesty-nx-welcome>
+<mat-toolbar color="primary">
+  <mat-icon style="cursor: pointer" (click)="reload()">contacts</mat-icon>
+  <span style="padding-left: 8px">BB contacts</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button
+          (click)="addContact()"
+          class="example-icon favorite-icon">
+    <mat-icon>add_circle</mat-icon>
+  </button>
+  <mat-form-field appearance="fill">
+    <input #searchInput
+           matInput
+           placeholder="search...">
+  </mat-form-field>
+  <button mat-icon-button class="example-icon"
+          (click)="toggleSearch()">
+    <mat-icon>{{ 'true' ? 'zoom_in' : 'search' }}</mat-icon>
+  </button>
+</mat-toolbar>
