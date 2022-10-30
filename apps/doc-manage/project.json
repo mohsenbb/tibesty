@@ -1,29 +1,27 @@
 {
-  "name": "top-tabs",
+  "name": "doc-manage",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/top-tabs/src",
-  "prefix": "tibesty",
+  "sourceRoot": "apps/doc-manage/src",
+  "prefix": "docman",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
-      "outputs": [
-        "{options.outputPath}"
-      ],
+      "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/top-tabs",
-        "index": "apps/top-tabs/src/index.html",
-        "main": "apps/top-tabs/src/main.ts",
-        "polyfills": "apps/top-tabs/src/polyfills.ts",
-        "tsConfig": "apps/top-tabs/tsconfig.app.json",
+        "outputPath": "dist/apps/doc-manage",
+        "index": "apps/doc-manage/src/index.html",
+        "main": "apps/doc-manage/src/main.ts",
+        "polyfills": "apps/doc-manage/src/polyfills.ts",
+        "tsConfig": "apps/doc-manage/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [
-          "apps/top-tabs/src/favicon.ico",
-          "apps/top-tabs/src/assets"
+          "apps/doc-manage/src/favicon.ico",
+          "apps/doc-manage/src/assets"
         ],
         "styles": [
           "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
-          "apps/top-tabs/src/styles.scss"
+          "apps/doc-manage/src/styles.scss"
         ],
         "scripts": []
       },
@@ -43,8 +41,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/top-tabs/src/environments/environment.ts",
-              "with": "apps/top-tabs/src/environments/environment.prod.ts"
+              "replace": "apps/doc-manage/src/environments/environment.ts",
+              "with": "apps/doc-manage/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -61,42 +59,40 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "options": {
-        "port": 5200
-      },
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "top-tabs:build:production"
+          "browserTarget": "doc-manage:build:production"
         },
         "development": {
-          "browserTarget": "top-tabs:build:development"
+          "browserTarget": "doc-manage:build:development"
         }
       },
-      "defaultConfiguration": "development"
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 5201
+      }
     },
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "top-tabs:build"
+        "browserTarget": "doc-manage:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
         "lintFilePatterns": [
-          "apps/top-tabs/**/*.ts",
-          "apps/top-tabs/**/*.html"
+          "apps/doc-manage/**/*.ts",
+          "apps/doc-manage/**/*.html"
         ]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": [
-        "{workspaceRoot}/coverage/{projectRoot}"
-      ],
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/top-tabs/jest.config.ts",
+        "jestConfig": "apps/doc-manage/jest.config.ts",
         "passWithNoTests": true
       }
     }
