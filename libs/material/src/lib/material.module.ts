@@ -7,17 +7,19 @@ import { MatRippleModule } from "@angular/material/core";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatInputModule } from "@angular/material/input";
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatSidenavModule } from "@angular/material/sidenav";
 
 @NgModule({
   exports: [
-    MatTableModule,
-    MatIconModule,
     MatButtonModule,
     MatDialogModule,
-    MatRippleModule,
-    MatToolbarModule,
+    MatFormFieldModule,
+    MatIconModule,
     MatInputModule,
-    MatFormFieldModule
+    MatRippleModule,
+    MatSidenavModule,
+    MatTableModule,
+    MatToolbarModule
   ],
 })
 export class MaterialModule {}
