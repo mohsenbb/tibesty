@@ -8,3 +8,7 @@ export const appRoutes: Route[] = [
 //  - route to them
 //  works?
 //  - change comp to app (https://github.com/nrwl/nx-examples/tree/master/apps/products)
+//
+//  - switch to rtl
+//  - create app server API
+//    - create data models/shared libs...
