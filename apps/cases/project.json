@@ -1,0 +1,115 @@
+{
+  "name": "cases",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/cases/src",
+  "prefix": "tibesty",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/cases",
+        "index": "apps/cases/src/index.html",
+        "main": "apps/cases/src/main.ts",
+        "polyfills": "apps/cases/src/polyfills.ts",
+        "tsConfig": "apps/cases/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": ["apps/cases/src/favicon.ico", "apps/cases/src/assets"],
+        "styles": ["apps/cases/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/cases/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/cases/src/environments/environment.ts",
+              "with": "apps/cases/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/cases/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "cases:build:production"
+        },
+        "development": {
+          "browserTarget": "cases:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4202,
+        "publicHost": "http://localhost:4202"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "cases:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/cases/**/*.ts", "apps/cases/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/cases/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "cases:build",
+        "port": 4202
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "cases:build:development"
+        },
+        "production": {
+          "buildTarget": "cases:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
