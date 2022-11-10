@@ -13,12 +13,14 @@ import { MatPaginatorModule } from "@angular/material/paginator";
 import { MatButtonToggleModule } from "@angular/material/button-toggle";
 import { MatTreeModule } from "@angular/material/tree";
 import { MatProgressBarModule } from "@angular/material/progress-bar";
+import { MatExpansionModule } from "@angular/material/expansion";
 
 @NgModule({
   exports: [
     MatButtonModule,
     MatButtonToggleModule,
     MatCardModule,
+    MatExpansionModule,
     MatGridListModule,
     MatIconModule,
     MatListModule,

@@ -4,7 +4,9 @@
     [rowspan]="3"
     [style.background]="'lightgreen'">
 
-    <p>tree</p>
+    <tibesty-accordion (selection)="handleSelection($event)"
+                       [panelData]="ACCORDION_DATA">
+    </tibesty-accordion>
 
   </mat-grid-tile>
 

@@ -1,0 +1,92 @@
+//:host ::ng-deep .mat-grid-tile-content {
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  bottom: 0;
+//  position: absolute;
+//  display: inline-block;
+//  align-items: center;
+//  justify-content: center;
+//  height: 100%;
+//  padding: 0;
+//  margin: 0;
+//}
+//
+//.mat-grid-tile {
+//  border: 5px solid green;
+//}
+//
+//.example-container {
+//  height: 365px;
+//  overflow: auto;
+//}
+//
+//table {
+//  width: 100%;
+//}
+//
+//tr.mat-footer-row {
+//  font-weight: bold;
+//}
+//
+//.mat-table-sticky {
+//  border-top: 1px solid #e0e0e0;
+//}
+
+:host ::ng-deep .mat-grid-tile-content {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.mat-grid-tile {
+  border: 5px solid green;
+}
+
+//.tree-demo-container {
+//  display: flex;
+//  flex-direction: column;
+//  justify-content: center;
+//}
+//
+//.leaf-node {
+//  padding-left: 30px;
+//}
+//
+//.example-tree-invisible {
+//  display: none;
+//}
+//
+//.example-tree ul,
+//.example-tree li {
+//  margin-top: 0;
+//  margin-bottom: 0;
+//  list-style-type: none;
+//}
+//
+///*
+// * This padding sets alignment of the nested nodes.
+// */
+//.example-tree .mat-nested-tree-node .nested-node {
+//  padding-left: 10px;
+//}
+//
+///*
+// * Padding for leaf nodes.
+// * Leaf nodes need to have padding so as to align with other non-leaf nodes
+// * under the same parent.
+// */
+//.example-tree .nested-node > .mat-tree-node {
+//  padding-left: 40px;
+//}
+//
+//
+//

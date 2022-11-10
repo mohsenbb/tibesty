@@ -1,0 +1,21 @@
+<mat-accordion>
+
+  <mat-expansion-panel hideToggle *ngFor="let panel of panelData">
+
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{ panel.name }}
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <mat-selection-list [multiple]="false">
+      <mat-list-option *ngFor="let elm of panel.list"
+                       (click)="processSelection(elm.name)"
+                       [value]="elm.name">
+        {{ elm.name }}
+      </mat-list-option>
+    </mat-selection-list>
+
+  </mat-expansion-panel>
+
+</mat-accordion>
