@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransKeyService } from "@tibesty/translation";
 
 @Component({
   selector: 'tibesty-root',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'host';
+
+  constructor(private transKeyService: TransKeyService) {
+  }
+
+  getTransKey(id: string) {
+    return this.transKeyService.getTransKey(id);
+  }
 }

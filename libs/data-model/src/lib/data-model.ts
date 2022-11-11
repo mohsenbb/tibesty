@@ -1,4 +1,12 @@
 export interface AccordionNode {
-  name: string;
+  id: string;
   list?: AccordionNode[];
+}
+
+export interface KeyProperties {
+  id: string;
+  title: string[];
+  emoji?: string;
+  text?: string[];
+  extras?: undefined;
 }

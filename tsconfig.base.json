@@ -17,6 +17,7 @@
     "paths": {
       "@tibesty/data-model": ["libs/data-model/src/index.ts"],
       "@tibesty/material": ["libs/material/src/index.ts"],
+      "@tibesty/translation": ["libs/translation/src/index.ts"],
       "@tibesty/ui-comp": ["libs/ui-comp/src/index.ts"]
     }
   },

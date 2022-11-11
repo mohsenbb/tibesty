@@ -9,45 +9,42 @@ import { AccordionNode } from "@tibesty/data-model";
 export class RemoteEntryComponent {
   ACCORDION_DATA: AccordionNode[] = [
     {
-      name: 'Transport & Aviation Insurance',
+      id: 'transport-aviation-insurance',
       list: [
         {
-          name: 'Airplane body',
+          id: 'airplane-body-responsibilities',
         },
         {
-          name: 'Open Cargo Transport'
+          id: 'open-cargo-transport'
         },
         {
-          name: 'Ship body'
+          id: 'ship-body'
         },
         {
-          name: 'Cargo Shipment - Air'
+          id: 'cargo-shipment-air'
         },
         {
-          name: 'Cargo Shipment - Land'
+          id: 'cargo-shipment-land'
         },
         {
-          name: 'Cargo Shipment - Sea'
+          id: 'cargo-shipment-sea'
         }
       ]
     },
     {
-      name: 'Car Insurance',
+      id: 'car-insurance',
       list: [
         {
-          name: 'Car body',
+          id: 'car-body',
         },
         {
-          name: 'Car Cargo Transport'
+          id: 'car-cargo-transport'
         },
         {
-          name: 'Car body'
+          id: 'car-shipment-land'
         },
         {
-          name: 'Car Shipment - Land'
-        },
-        {
-          name: 'Car Shipment - Sea'
+          id: 'car-shipment-sea'
         }
       ]
     }
@@ -57,5 +54,3 @@ export class RemoteEntryComponent {
     console.log('==> load detail of:', selection)
   }
 }
-
-
