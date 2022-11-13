@@ -7,8 +7,7 @@ import { TRANS_KEYS } from "../../assets/keys";
 })
 export class TransKeyService {
 
-  lang = 0;
-
+  lang = document.body.dir === 'ltr' ? 0 : 1;
   transKeyMap = new Map<string, KeyProperties>();
 
   constructor() {
