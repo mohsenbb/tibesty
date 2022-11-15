@@ -10,3 +10,16 @@ export interface KeyProperties {
   text?: string[];
   extras?: undefined;
 }
+
+export interface InsTransAvi {
+  id?: string;
+  name: string;
+  phone: string;
+  email: string;
+}
+
+export const emptyContact:InsTransAvi = {
+  name: '',
+  phone: '',
+  email: ''
+}

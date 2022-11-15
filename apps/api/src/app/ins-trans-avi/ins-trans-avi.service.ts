@@ -1,26 +1,35 @@
 import { Injectable } from '@nestjs/common';
-import { CreateInsTransAviDto } from './dto/create-ins-trans-avi.dto';
-import { UpdateInsTransAviDto } from './dto/update-ins-trans-avi.dto';
+import { v4 as uuidv4 } from 'uuid';
+import { INS_TRANS_AVI } from "./db";
+import { InsTransAvi } from "@tibesty/data-model";
 
 @Injectable()
 export class InsTransAviService {
-  create(createInsTransAviDto: CreateInsTransAviDto) {
-    return 'This action adds a new insTransAvi';
-  }
+  dbData = INS_TRANS_AVI;
 
   findAll() {
-    return `This action returns all insTransAvi`;
+    return this.dbData;
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} insTransAvi`;
+  findOne(id: string) {
+    return this.dbData.find(contact => contact.id === id);
   }
 
-  update(id: number, updateInsTransAviDto: UpdateInsTransAviDto) {
-    return `This action updates a #${id} insTransAvi`;
+  create(contact: InsTransAvi) {
+    const newContact = Object.assign({}, contact, {id: uuidv4()});
+    this.dbData = [...this.dbData, newContact];
+    return newContact;
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} insTransAvi`;
+  update(id: string, contact: InsTransAvi) {
+    const idx = this.dbData.findIndex(contact => contact.id === id);
+    this.dbData[idx] = contact;
+    return this.dbData[idx];
+  }
+
+  remove(id: string) {
+    const idx = this.dbData.findIndex(contact => contact.id === id);
+    this.dbData.splice(idx, 1);
+    return this.dbData;
   }
 }

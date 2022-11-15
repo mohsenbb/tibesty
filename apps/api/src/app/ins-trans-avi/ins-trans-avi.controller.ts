@@ -8,16 +8,15 @@ import {
   Delete,
 } from '@nestjs/common';
 import { InsTransAviService } from './ins-trans-avi.service';
-import { CreateInsTransAviDto } from './dto/create-ins-trans-avi.dto';
-import { UpdateInsTransAviDto } from './dto/update-ins-trans-avi.dto';
+import { InsTransAvi } from "@tibesty/data-model";
 
 @Controller('ins-trans-avi')
 export class InsTransAviController {
   constructor(private readonly insTransAviService: InsTransAviService) {}
 
   @Post()
-  create(@Body() createInsTransAviDto: CreateInsTransAviDto) {
-    return this.insTransAviService.create(createInsTransAviDto);
+  create(@Body() insTransAvi: InsTransAvi) {
+    return this.insTransAviService.create(insTransAvi);
   }
 
   @Get()
@@ -27,19 +26,19 @@ export class InsTransAviController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.insTransAviService.findOne(+id);
+    return this.insTransAviService.findOne(id);
   }
 
   @Patch(':id')
   update(
     @Param('id') id: string,
-    @Body() updateInsTransAviDto: UpdateInsTransAviDto
+    @Body() insTransAvi: InsTransAvi
   ) {
-    return this.insTransAviService.update(+id, updateInsTransAviDto);
+    return this.insTransAviService.update(id, insTransAvi);
   }
 
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.insTransAviService.remove(+id);
+    return this.insTransAviService.remove(id);
   }
 }
