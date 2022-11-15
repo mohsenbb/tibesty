@@ -18,7 +18,7 @@ export interface InsTransAvi {
   email: string;
 }
 
-export const emptyContact:InsTransAvi = {
+export const emptyInsTransAviEntry:InsTransAvi = {
   name: '',
   phone: '',
   email: ''

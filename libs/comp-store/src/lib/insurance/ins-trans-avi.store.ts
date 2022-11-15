@@ -74,7 +74,7 @@ export class InsTransAviStore extends ComponentStore<InsTransAviState> {
       .pipe(
         withLatestFrom(this.contacts$),
         map(([apiContact, contacts]) => {
-          const idx = contacts.findIndex((contact: { id: any; }) => contact.id === apiContact.id);
+          const idx = contacts.findIndex((contact: any) => contact.id === apiContact.id);
           const contactsClone = [...contacts];
           contactsClone[idx] = apiContact;
           return contactsClone;
