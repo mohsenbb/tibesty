@@ -3,9 +3,8 @@ import {
   Get,
   Post,
   Body,
-  Patch,
   Param,
-  Delete,
+  Delete, Put
 } from '@nestjs/common';
 import { InsTransAviService } from './ins-trans-avi.service';
 import { InsTransAvi } from "@tibesty/data-model";
@@ -29,7 +28,7 @@ export class InsTransAviController {
     return this.insTransAviService.findOne(id);
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(
     @Param('id') id: string,
     @Body() insTransAvi: InsTransAvi

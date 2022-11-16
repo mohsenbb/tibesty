@@ -1,6 +1,5 @@
 import { TestBed } from '@angular/core/testing';
-
-import { InsTransAviService } from './ins-trans-avi.store';
+import { InsTransAviService } from "@tibesty/data-api";
 
 describe('InsTransAviService', () => {
   let service: InsTransAviService;
