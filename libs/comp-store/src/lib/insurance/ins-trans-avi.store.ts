@@ -5,12 +5,12 @@ import { InsTransAviService } from "@tibesty/data-api";
 import { map, take, withLatestFrom } from "rxjs";
 
 export interface InsTransAviState {
-  contacts: InsTransAvi[];
+  entries: InsTransAvi[];
   searchStr: string;
 }
 
 const defaultState: InsTransAviState = {
-  contacts: [],
+  entries: [],
   searchStr: ''
 };
 
@@ -19,19 +19,19 @@ const defaultState: InsTransAviState = {
 })
 export class InsTransAviStore extends ComponentStore<InsTransAviState> {
 
-  readonly contacts$ =
-    this.select(({contacts}) => contacts);
+  readonly entries$ =
+    this.select(({entries}) => entries);
 
   readonly searchStr$ =
     this.select(({searchStr}) => searchStr);
 
-  readonly contactsFiltered$ = this.select(({contacts, searchStr}) =>
-    contacts.filter((contact: InsTransAvi) =>
-      Object.values(contact).join('').toLowerCase().includes(searchStr)));
+  readonly entriesFiltered$ = this.select(({entries, searchStr}) =>
+    entries.filter((entry: InsTransAvi) =>
+      Object.values(entry).join('').toLowerCase().includes(searchStr)));
 
-  readonly contactsUpdate = this.updater((state, contacts: InsTransAvi[]) => ({
+  readonly entriesUpdate = this.updater((state, entries: InsTransAvi[]) => ({
     ...state,
-    contacts
+    entries
   }));
 
   constructor(private apiService: InsTransAviService) {
@@ -39,57 +39,57 @@ export class InsTransAviStore extends ComponentStore<InsTransAviState> {
   }
 
   init() {
-    this.loadContacts();
+    this.loadEntries();
   }
 
-  private readonly loadContacts = () =>
+  private readonly loadEntries = () =>
     this.apiService.all()
       .pipe(take(1))
-      .subscribe((contacts: any) => this.setState((state) => ({
+      .subscribe((entries: InsTransAvi[]) => this.setState((state) => ({
         ...state,
-        contacts
+        entries
       })));
 
   readonly searchStrUpdate = (searchStr: string) =>
     this.patchState({searchStr});
 
-  // "create" api returns created contact
+  // "create" api returns created entry
   // once emits a result, combine with store's state$, add, and patchState
-  addContact = (contact: InsTransAvi) => {
-    this.apiService.create(contact)
+  addEntry = (entry: InsTransAvi) => {
+    this.apiService.create(entry)
       .pipe(
         withLatestFrom(this.state$),
-        map(([apiContact, state]) => ([...state.contacts, apiContact])),
+        map(([apiEntry, state]) => ([...state.entries, apiEntry])),
         take(1))
-      .subscribe((contacts: InsTransAvi[]) =>
-        this.patchState({contacts})
+      .subscribe((entries: InsTransAvi[]) =>
+        this.patchState({entries})
       );
   };
 
-  // "update" api returns updated contact
-  // once emitted, combine with contacts$ from selector, locate and update through id,
+  // "update" api returns updated entry
+  // once emitted, combine with ins-trans-avi$ from selector, locate and update through id,
   //   and patchState
-  updateContact = (contact: InsTransAvi) => {
-    this.apiService.update(contact)
+  updateEntry = (entry: InsTransAvi) => {
+    this.apiService.update(entry)
       .pipe(
-        withLatestFrom(this.contacts$),
-        map(([apiContact, contacts]) => {
-          const idx = contacts.findIndex((contact: any) => contact.id === apiContact.id);
-          const contactsClone = [...contacts];
-          contactsClone[idx] = apiContact;
-          return contactsClone;
+        withLatestFrom(this.entries$),
+        map(([apiEntry, entries]) => {
+          const idx = entries.findIndex((entry: InsTransAvi) => entry.id === apiEntry.id);
+          const entriesClone = [...entries];
+          entriesClone[idx] = apiEntry;
+          return entriesClone;
         }),
         take(1)
       )
-      .subscribe((contacts: InsTransAvi[]) =>
-        this.patchState({contacts})
+      .subscribe((entries: InsTransAvi[]) =>
+        this.patchState({entries})
       );
   };
 
   // "remove" api returns the entire, modified collection
   // once emitted, simply "update" state with new collection
-  deleteContact = (contact: InsTransAvi) =>
-    this.apiService.delete(contact)
+  deleteEntry = (entry: InsTransAvi) =>
+    this.apiService.delete(entry)
       .pipe(take(1))
-      .subscribe((contacts: any) => this.contactsUpdate(contacts));
+      .subscribe((entries: InsTransAvi[]) => this.entriesUpdate(entries));
 }

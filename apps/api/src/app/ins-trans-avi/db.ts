@@ -2,51 +2,183 @@ import { InsTransAvi } from "@tibesty/data-model";
 
 export const INS_TRANS_AVI: InsTransAvi[] = [
   {
-    id: '10',
-    name: 'Diego Global',
-    phone: '111-222-3333',
-    email: 'diego@global.com'
+    "id": "k10",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 652.25,
+    "paymentNet": 621.97,
+    "dateEntry": "2022-10-25",
+    "dateIssue": "2022-10-25",
+    "attachment": 0,
+    "insured": "شركة الرحبة الحديثة",
+    "num": "TT002022MC/00317"
   },
   {
-    id: '20',
-    name: 'Gavin East',
-    phone: '222-444-3212',
-    email: 'gavin@east.com'
+    "id": "k20",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 5008.5,
+    "paymentNet": 4913.74,
+    "dateEntry": "2022-10-25",
+    "dateIssue": "2022-10-26",
+    "attachment": 0,
+    "insured": "شركة كامكو للخدمات النفطية",
+    "num": "TT002022MC/00318"
   },
   {
-    id: '30',
-    name: 'Manoj Stillaway',
-    phone: '123-432-4567',
-    email: 'manoj@away.in'
+    "id": "k30",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 33349,
+    "paymentNet": 32835.71,
+    "dateEntry": "2022-10-20",
+    "dateIssue": "2022-10-20",
+    "attachment": 0,
+    "insured": "شركة الحصاد العالمي الاول للمطاحن والأعلاف",
+    "num": "TT002022MC/00316"
   },
   {
-    id: '40',
-    name: 'Terry Scorer',
-    phone: '453-444-6666',
-    email: 'terry@game.com'
+    "id": "k40",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 6631.25,
+    "paymentNet": 6512.6,
+    "dateEntry": "2022-10-18",
+    "dateIssue": "2022-10-18",
+    "attachment": 0,
+    "insured": "شركة الرشيد لصناعة الاجهزة الالكترونية والكهربائية",
+    "num": "TT002022MC/00314"
   },
   {
-    id: '50',
-    name: 'Dhairya Dirtycsser',
-    phone: '456-777-6666',
-    email: 'dhairya@css.com'
+    "id": "k50",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 2437.75,
+    "paymentNet": 2381.21,
+    "dateEntry": "2022-10-18",
+    "dateIssue": "2022-10-18",
+    "attachment": 0,
+    "insured": "شركة الفائد للصناعات الورقية",
+    "num": "TT002022MC/00315"
   },
   {
-    id: '60',
-    name: 'Mohsen Oshawa',
-    phone: '890-576-1438',
-    email: 'mohsen@east.ca'
+    "id": "k60",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 3420.25,
+    "paymentNet": 3349.34,
+    "dateEntry": "2022-10-17",
+    "dateIssue": "2022-10-17",
+    "attachment": 0,
+    "insured": "شركة منارة الساحل لاستيراد المواد الغذائية",
+    "num": "TT002022MC/00313"
   },
   {
-    id: '70',
-    name: 'Kern Thekid',
-    phone: '555-123-3454',
-    email: 'kern@bb.com'
+    "id": "k70",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 279.25,
+    "paymentNet": 254.3,
+    "dateEntry": "2022-10-16",
+    "dateIssue": "2022-10-16",
+    "attachment": 0,
+    "insured": "شركة غرناطة الدولية لاستيراد المواد الغذائية",
+    "num": "TT002022MC/00312"
   },
   {
-    id: '80',
-    name: 'Grzegorz Ninepm',
-    phone: '333-444-7777',
-    email: 'gr@bb.com'
+    "id": "k80",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": -2085.5,
+    "paymentNet": -2034,
+    "dateEntry": "2022-10-13",
+    "dateIssue": "2022-07-05",
+    "attachment": 1,
+    "insured": "شركة بريما لاستيراد المواد الغذائية",
+    "num": "TT002022MC/00113 / Cancelled"
+  },
+  {
+    "id": "k90",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": -4706.5,
+    "paymentNet": -4616,
+    "dateEntry": "2022-10-13",
+    "dateIssue": "2022-07-05",
+    "attachment": 1,
+    "insured": "شركة بريما لاستيراد المواد الغذائية",
+    "num": "TT002022MC/00109 / Cancelled"
+  },
+  {
+    "id": "k100",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": -1543,
+    "paymentNet": -1500,
+    "dateEntry": "2022-10-13",
+    "dateIssue": "2022-07-05",
+    "attachment": 1,
+    "insured": "شركة بريما لاستيراد المواد الغذائية",
+    "num": "TT002022MC/04079 / Cancelled"
+  },
+  {
+    "id": "k110",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 1543,
+    "paymentNet": 1500,
+    "dateEntry": "2022-10-13",
+    "dateIssue": "2022-04-14",
+    "attachment": 0,
+    "insured": "شركة بريما لاستيراد المواد الغذائية",
+    "num": "TT002022MC/04079 / Cancelled"
+  },
+  {
+    "id": "k120",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 16653.25,
+    "paymentNet": 16386.78,
+    "dateEntry": "2022-10-12",
+    "dateIssue": "2022-10-12",
+    "attachment": 0,
+    "insured": "جهاز الامداد الطبي",
+    "num": "TT002022MC/00311"
+  },
+  {
+    "id": "k130",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 12825.5,
+    "paymentNet": 12615.25,
+    "dateEntry": "2022-10-12",
+    "dateIssue": "2022-10-12",
+    "attachment": 0,
+    "insured": "جهاز الامداد الطبي",
+    "num": "TT002022MC/00310"
+  },
+  {
+    "id": "k140",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 12103,
+    "paymentNet": 11903.38,
+    "dateEntry": "2022-10-12",
+    "dateIssue": "2022-10-12",
+    "attachment": 0,
+    "insured": "جهاز الامداد الطبي",
+    "num": "TT002022MC/00309"
+  },
+  {
+    "id": "k150",
+    "paymentMethod": "LD",
+    "currencyType": "Cash",
+    "paymentTotal": 135783,
+    "paymentNet": 133755.71,
+    "dateEntry": "2022-10-12",
+    "dateIssue": "2022-10-12",
+    "attachment": 0,
+    "insured": "جهاز الامداد الطبي",
+    "num": "TT002022MC/00308"
   }
 ];

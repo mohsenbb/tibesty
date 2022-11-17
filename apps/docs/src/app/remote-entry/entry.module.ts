@@ -7,19 +7,17 @@ import { NxWelcomeComponent } from './nx-welcome.component';
 import { remoteRoutes } from './entry.routes';
 import { MaterialModule } from "@tibesty/material";
 import { UiCompModule } from "@tibesty/ui-comp";
-import { AddContactComponent } from "../comps/add-contact/add-contact.component";
-import { ContactsComponent } from "../comps/contacts/contacts.component";
+import { InsTransAviComponent } from "../comps/ins-trans-avi/ins-trans-avi.component";
 import { HeaderComponent } from "../comps/header/header.component";
-import { EditContactComponent } from "../comps/edit-contact/edit-contact.component";
+import { DialogEditAddComponent } from "../comps/dialog-edit-add/dialog-edit-add.component";
 import { ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
-    AddContactComponent,
-    ContactsComponent,
+    InsTransAviComponent,
     HeaderComponent,
     RemoteEntryComponent,
-    EditContactComponent,
+    DialogEditAddComponent,
     NxWelcomeComponent
   ],
   imports: [

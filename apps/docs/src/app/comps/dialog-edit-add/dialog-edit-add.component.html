@@ -1,0 +1,52 @@
+<div class="edit-add-dialog-form">
+
+  <h2 mat-dialog-title></h2>
+
+  <mat-dialog-content [formGroup]="form">
+
+    <mat-form-field>
+      <input matInput placeholder="num" formControlName="num">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="insured" formControlName="insured">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="attachment" formControlName="attachment">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="dateIssue" formControlName="dateIssue">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="dateEntry" formControlName="dateEntry">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="paymentNet" formControlName="paymentNet">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="paymentTotal" formControlName="paymentTotal">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="currency" formControlName="currency">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input matInput placeholder="paymentMethod" formControlName="paymentMethod">
+    </mat-form-field>
+
+  </mat-dialog-content>
+
+  <mat-dialog-actions>
+
+    <button mat-raised-button (click)="close()">close</button>
+    <button mat-raised-button color="primary" (click)="save()">save</button>
+
+  </mat-dialog-actions>
+
+</div>

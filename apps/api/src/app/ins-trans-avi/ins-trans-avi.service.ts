@@ -12,23 +12,23 @@ export class InsTransAviService {
   }
 
   findOne(id: string) {
-    return this.dbData.find(contact => contact.id === id);
+    return this.dbData.find(entry => entry.id === id);
   }
 
-  create(contact: InsTransAvi) {
-    const newContact = Object.assign({}, contact, {id: uuidv4()});
-    this.dbData = [...this.dbData, newContact];
-    return newContact;
+  create(entry: InsTransAvi) {
+    const newEntry = Object.assign({}, entry, {id: uuidv4()});
+    this.dbData = [...this.dbData, newEntry];
+    return newEntry;
   }
 
-  update(id: string, contact: InsTransAvi) {
-    const idx = this.dbData.findIndex(contact => contact.id === id);
-    this.dbData[idx] = contact;
+  update(id: string, entry: InsTransAvi) {
+    const idx = this.dbData.findIndex(entry => entry.id === id);
+    this.dbData[idx] = entry;
     return this.dbData[idx];
   }
 
   remove(id: string) {
-    const idx = this.dbData.findIndex(contact => contact.id === id);
+    const idx = this.dbData.findIndex(entry => entry.id === id);
     this.dbData.splice(idx, 1);
     return this.dbData;
   }

@@ -1,19 +1,19 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddContactComponent } from './add-contact.component';
+import { InsTransAviComponent } from './ins-trans-avi.component';
 
-describe('AddContactComponent', () => {
-  let component: AddContactComponent;
-  let fixture: ComponentFixture<AddContactComponent>;
+describe('InsTransAviComponent', () => {
+  let component: InsTransAviComponent;
+  let fixture: ComponentFixture<InsTransAviComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [AddContactComponent],
+      declarations: [InsTransAviComponent],
     }).compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddContactComponent);
+    fixture = TestBed.createComponent(InsTransAviComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

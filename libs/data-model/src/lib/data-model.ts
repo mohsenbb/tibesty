@@ -13,13 +13,25 @@ export interface KeyProperties {
 
 export interface InsTransAvi {
   id?: string;
-  name: string;
-  phone: string;
-  email: string;
+  num: string;
+  insured: string;
+  attachment: number;
+  dateIssue: string;
+  dateEntry: string;
+  paymentNet: number;
+  paymentTotal: number;
+  currencyType?: string;
+  paymentMethod?: string;
 }
 
-export const emptyInsTransAviEntry:InsTransAvi = {
-  name: '',
-  phone: '',
-  email: ''
-}
+export const emptyInsTransAviEntry: InsTransAvi = {
+  num: '',
+  insured: '',
+  attachment: 0,
+  dateIssue: '',
+  dateEntry: '',
+  paymentNet: 0,
+  paymentTotal: 0,
+  currencyType: 'LD',
+  paymentMethod: 'Cash'
+};

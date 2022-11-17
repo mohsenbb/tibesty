@@ -17,16 +17,16 @@ export class InsTransAviService {
     return this.http.get<InsTransAvi[]>(URL);
   }
 
-  create(contact: InsTransAvi): Observable<InsTransAvi> {
-    return this.http.post<InsTransAvi>(URL, contact);
+  create(entry: InsTransAvi): Observable<InsTransAvi> {
+    return this.http.post<InsTransAvi>(URL, entry);
   }
 
-  update(contact: InsTransAvi): Observable<InsTransAvi> {
-    return this.http.put<InsTransAvi>(URL + `/${contact.id}`, contact);
+  update(entry: InsTransAvi): Observable<InsTransAvi> {
+    return this.http.put<InsTransAvi>(URL + `/${entry.id}`, entry);
   }
 
   // for a change, we're making "delete" return the entire collection
-  delete(contact: InsTransAvi): Observable<InsTransAvi[]> {
-    return this.http.delete<InsTransAvi[]>(URL + `/${contact.id}`);
+  delete(entry: InsTransAvi): Observable<InsTransAvi[]> {
+    return this.http.delete<InsTransAvi[]>(URL + `/${entry.id}`);
   }
 }

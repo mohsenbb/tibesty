@@ -5,7 +5,7 @@ import {
   ViewChild
 } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
-import { openEditContactDialog } from "../edit-contact/edit-contact.component";
+import { openEditAddDialog } from "../dialog-edit-add/dialog-edit-add.component";
 import { filter, Observable, take } from "rxjs";
 import { InsTransAviStore } from "@tibesty/comp-store";
 import { emptyInsTransAviEntry } from "@tibesty/data-model";
@@ -35,12 +35,12 @@ export class HeaderComponent {
     }
   }
 
-  addContact() {
-    openEditContactDialog(this.dialog, emptyInsTransAviEntry)
+  addEntry() {
+    openEditAddDialog(this.dialog, emptyInsTransAviEntry)
       .pipe(
         take(1),
         filter(val => !!val)
-      ).subscribe(contact => this.store.addContact(contact));
+      ).subscribe(entry => this.store.addEntry(entry));
   }
 
   setSearchStr(searchStr: string) {
