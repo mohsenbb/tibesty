@@ -13,7 +13,7 @@ export interface KeyProperties {
 
 export interface InsTransAvi {
   id?: string;
-  num: string;
+  numDoc: string;
   insured: string;
   attachment: number;
   dateIssue: string;
@@ -25,7 +25,7 @@ export interface InsTransAvi {
 }
 
 export const emptyInsTransAviEntry: InsTransAvi = {
-  num: '',
+  numDoc: '',
   insured: '',
   attachment: 0,
   dateIssue: '',

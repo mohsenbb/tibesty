@@ -2,34 +2,6 @@ import { KeyProperties } from "@tibesty/data-model";
 
 export const TRANS_KEYS: KeyProperties[] = [
   {
-    id: "home",
-    title: [
-      "Home",
-      "الرئيسية"
-    ]
-  },
-  {
-    id: "document-management",
-    title: [
-      "Document Management",
-      "إدارة الوثائق"
-    ]
-  },
-  {
-    id: "accidents-and-cases",
-    title: [
-      "Accidents & Cases",
-      "المطالبات والحوادث"
-    ]
-  },
-  {
-    id: "payments-and-accounting",
-    title: [
-      "Payments & Accounting",
-      "الأقساط والحسابات"
-    ]
-  },
-  {
     id: "about",
     title: [
       "About",
@@ -37,87 +9,199 @@ export const TRANS_KEYS: KeyProperties[] = [
     ]
   },
   {
-    id: "transport-aviation-insurance",
-    title: [
-      "Transport & Aviation Insurance",
-      "تأمينات النقل والطيران"
-    ]
-  },
-  {
-    id: "airplane-body-responsibilities",
+    id: "airplaneBodyResponsibilities",
     title: [
       "Airplane body & Responsibilities",
       "أجسام ومسؤوليات طائرات"
     ]
   },
   {
-    id: "open-cargo-transport",
+    id: "accidentsAndCases",
     title: [
-      "Open Cargo Transport",
-      "نقل بضائع - مفتوحة"
+      "Accidents & Cases",
+      "المطالبات والحوادث"
     ]
   },
   {
-    id: "ship-body",
+    id: "attachment",
     title: [
-      "Ship body",
-      "أجسام سفن"
+      "attachment",
+      "ملحق"
     ]
   },
   {
-    id: "cargo-shipment-air",
+    id: "dateIssue",
     title: [
-      "Cargo Shipment - Air",
-      "نقل بضائع - جوي"
+      "issue date",
+      "تاريخ الإصدار"
     ]
   },
   {
-    id: "cargo-shipment-land",
+    id: "dataEntry",
     title: [
-      "Cargo Shipment - Land",
-      "نقل بضائع - بري"
+      "entry date",
+      "تاريخ الإدخال"
     ]
   },
   {
-    id: "cargo-shipment-sea",
+    id: "documentManagement",
     title: [
-      "Cargo Shipment - Sea",
-      "نقل بضائع - بحري"
+      "Document Management",
+      "إدارة الوثائق"
     ]
   },
   {
-    id: "car-insurance",
-    title: [
-      "Car Insurance",
-      "تأمينات سيارات"
-    ]
-  },
-  {
-    id: "car-body",
+    id: "carBody",
     title: [
       "Car body",
       "أجسام سيارات"
     ]
   },
   {
-    id: "car-cargo-transport",
+    id: "carCargoTransport",
     title: [
       "Car Cargo Transport",
       "شحن سيارات"
     ]
   },
   {
-    id: "car-shipment-land",
+    id: "carInsurance",
+    title: [
+      "Car Insurance",
+      "تأمينات سيارات"
+    ]
+  },
+  {
+    id: "carShipmentLand",
     title: [
       "Car Shipment - Land",
       "نقل سيارات - بري"
     ]
   },
   {
-    id: "car-shipment-sea",
+    id: "carShipmentSea",
     title: [
       "Car Shipment - Sea",
       "نقل سيارات - بحري"
+    ]
+  },
+  {
+    id: "cargoShipmentAir",
+    title: [
+      "Cargo Shipment - Air",
+      "نقل بضائع - جوي"
+    ]
+  },
+  {
+    id: "cargoShipmentLand",
+    title: [
+      "Cargo Shipment - Land",
+      "نقل بضائع - بري"
+    ]
+  },
+  {
+    id: "cargoShipmentSea",
+    title: [
+      "Cargo Shipment - Sea",
+      "نقل بضائع - بحري"
+    ]
+  },
+  {
+    id: "cash",
+    title: [
+      "cash",
+      "نقدًا"
+    ]
+  },
+  {
+    id: "currencyLibyan",
+    title: [
+      "LD",
+      "د.ل"
+    ]
+  },
+  {
+    id: "currencyType",
+    title: [
+      "currency type",
+      "نوع العملة"
+    ]
+  },
+  {
+    id: "home",
+    title: [
+      "Home",
+      "الرئيسية"
+    ]
+  },
+  {
+    id: "insured",
+    title: [
+      "insured",
+      "المؤمن له"
+    ]
+  },
+  {
+    id: "numDoc",
+    title: [
+      "doc #",
+      "رقم الوثيقة"
+    ]
+  },
+  {
+    id: "openCargoTransport",
+    title: [
+      "Open Cargo Transport",
+      "نقل بضائع - مفتوحة"
+    ]
+  },
+  {
+    id: "ops",
+    title: [
+      "ops",
+      "عمليات"
+    ]
+  },
+  {
+    id: "paymentsAndAccounting",
+    title: [
+      "Payments & Accounting",
+      "الأقساط والحسابات"
+    ]
+  },
+  {
+    id: "paymentMethod",
+    title: [
+      "payment method",
+      "طريقة السداد"
+    ]
+  },
+  {
+    id: "paymentNet",
+    title: [
+      "net payment",
+      "صافي القسط"
+    ]
+  },
+  {
+    id: "paymentTotal",
+    title: [
+      "total payment",
+      "إجمالي القسط"
+    ]
+  },
+  {
+    id: "shipBody",
+    title: [
+      "Ship body",
+      "أجسام سفن"
+    ]
+  },
+  {
+    id: "transportAviationInsurance",
+    title: [
+      "Transport & Aviation Insurance",
+      "تأمينات النقل والطيران"
     ]
   }
 ];

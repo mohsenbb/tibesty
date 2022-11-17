@@ -16,7 +16,10 @@
         "tsConfig": "apps/docs/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": ["apps/docs/src/favicon.ico", "apps/docs/src/assets"],
-        "styles": ["apps/docs/src/styles.scss"],
+        "styles": [
+          "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
+          "apps/docs/src/styles.scss"
+        ],
         "scripts": [],
         "customWebpackConfig": {
           "path": "apps/docs/webpack.config.js"

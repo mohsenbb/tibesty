@@ -16,14 +16,14 @@ export class DialogEditAddComponent {
 
   form = this.fb.group({
     id: [this.entry.id],
-    num: [this.entry.num, Validators.required],
+    num: [this.entry.numDoc, Validators.required],
     insured: [this.entry.insured, Validators.required],
     attachment: [this.entry.attachment, Validators.required],
     dateIssue: [this.entry.dateIssue, Validators.required],
     dateEntry: [this.entry.dateEntry, Validators.required],
     paymentNet: [this.entry.paymentNet, Validators.required],
     paymentTotal: [this.entry.paymentTotal, Validators.required],
-    currency: [this.entry.currencyType],
+    currencyType: [this.entry.currencyType],
     paymentMethod: [this.entry.paymentMethod],
   });
 

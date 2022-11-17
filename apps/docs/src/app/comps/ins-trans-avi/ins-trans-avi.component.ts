@@ -13,7 +13,9 @@ import { InsTransAvi } from "@tibesty/data-model";
 export class InsTransAviComponent {
   dataSource = this.store.entriesFiltered$;
   displayedColumns =
-    ['num', 'insured', 'attachment', 'dateIssue', 'dateEntry', 'paymentNet', 'paymentTotal', 'currencyType', 'paymentMethod', 'edit', 'delete'];
+    ['numDoc',         'insured', 'attachment', 'dateIssue', 'dateEntry', 'paymentNet', 'paymentTotal', 'currencyType', 'paymentMethod', 'ops'];
+  displayedColumnsProps =
+    ['warn:cancelled', '',        '',            '',      '',     'warn:currency',     'warn:currency',       'keyTrans',             'keyTrans',        'ops']
 
   constructor(private dialog: MatDialog, private store: InsTransAviStore) {}
 

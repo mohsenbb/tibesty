@@ -11,42 +11,42 @@ import { InsTransAviStore } from "@tibesty/comp-store";
 export class RemoteEntryComponent implements OnInit {
   ACCORDION_DATA: AccordionNode[] = [
     {
-      id: 'transport-aviation-insurance',
+      id: 'transportAviationInsurance',
       list: [
         {
-          id: 'airplane-body-responsibilities',
+          id: 'airplaneBodyResponsibilities',
         },
         {
-          id: 'open-cargo-transport'
+          id: 'openCargoTransport'
         },
         {
-          id: 'ship-body'
+          id: 'shipBody'
         },
         {
-          id: 'cargo-shipment-air'
+          id: 'cargoShipmentAir'
         },
         {
-          id: 'cargo-shipment-land'
+          id: 'cargoShipmentLand'
         },
         {
-          id: 'cargo-shipment-sea'
+          id: 'cargoShipmentSea'
         }
       ]
     },
     {
-      id: 'car-insurance',
+      id: 'carInsurance',
       list: [
         {
-          id: 'car-body',
+          id: 'carBody',
         },
         {
-          id: 'car-cargo-transport'
+          id: 'carCargoTransport'
         },
         {
-          id: 'car-shipment-land'
+          id: 'carShipmentLand'
         },
         {
-          id: 'car-shipment-sea'
+          id: 'carShipmentSea'
         }
       ]
     }
