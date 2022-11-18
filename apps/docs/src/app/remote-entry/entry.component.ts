@@ -9,6 +9,8 @@ import { InsTransAviStore } from "@tibesty/comp-store";
   providers: [InsTransAviStore]
 })
 export class RemoteEntryComponent implements OnInit {
+  selection = 'cargoShipmentSea';
+
   ACCORDION_DATA: AccordionNode[] = [
     {
       id: 'transportAviationInsurance',
@@ -60,6 +62,7 @@ export class RemoteEntryComponent implements OnInit {
   }
 
   handleSelection(selection: any) {
+    this.selection = selection;
     console.log('==> load detail of:', selection)
   }
 }

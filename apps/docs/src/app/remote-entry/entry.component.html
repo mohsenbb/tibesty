@@ -25,8 +25,13 @@
     [rowspan]="6"
     [style.background]="'lightpink'">
 
-    <tibesty-header></tibesty-header>
-    <tibesty-ins-trans-avi></tibesty-ins-trans-avi>
+    <tibesty-header [selection]="selection"></tibesty-header>
+
+    <ng-container [ngSwitch]="selection">
+      <ng-container *ngSwitchCase="'cargoShipmentSea'">
+        <tibesty-ins-trans-avi></tibesty-ins-trans-avi>
+      </ng-container>
+    </ng-container>
 
   </mat-grid-tile>
 
