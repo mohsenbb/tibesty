@@ -23,7 +23,7 @@ export class TbsTableComponent implements OnInit {
   ngOnInit() {
     setTimeout(() => {
       this.loader = false;
-    }, 2000);
+    }, 500);
   }
 
   updateEntry(element: any) {

@@ -16,7 +16,7 @@ export class DialogEditAddComponent {
 
   form = this.fb.group({
     id: [this.entry.id],
-    num: [this.entry.numDoc, Validators.required],
+    numDoc: [this.entry.numDoc, Validators.required],
     insured: [this.entry.insured, Validators.required],
     attachment: [this.entry.attachment, Validators.required],
     dateIssue: [this.entry.dateIssue, Validators.required],
