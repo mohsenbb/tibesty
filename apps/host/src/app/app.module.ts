@@ -8,6 +8,7 @@ import { appRoutes } from './app.routes';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { MaterialModule } from "@tibesty/material";
 import { HttpClientModule } from "@angular/common/http";
+import { UtilsModule } from "@tibesty/utils";
 
 @NgModule({
   declarations: [AppComponent, NxWelcomeComponent],
@@ -16,7 +17,8 @@ import { HttpClientModule } from "@angular/common/http";
     BrowserAnimationsModule,
     MaterialModule,
     HttpClientModule,
-    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' })
+    RouterModule.forRoot(appRoutes, {initialNavigation: 'enabledBlocking'}),
+    UtilsModule
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -3,7 +3,7 @@ import { filter, take } from "rxjs";
 import { openEditAddDialog } from "../dialog-edit-add/dialog-edit-add.component";
 import { MatDialog } from "@angular/material/dialog";
 import { InsTransAviStore } from "@tibesty/comp-store";
-import { InsTransAvi } from "@tibesty/data-model";
+import { InsTransAvi, KEYS } from "@tibesty/data-model";
 
 @Component({
   selector: 'tibesty-ins-trans-avi',
@@ -12,23 +12,25 @@ import { InsTransAvi } from "@tibesty/data-model";
 })
 export class InsTransAviComponent {
   dataSource = this.store.entriesFiltered$;
+
   displayedColumns =
-    ['numDoc',         'insured', 'attachment', 'dateIssue', 'dateEntry', 'paymentNet', 'paymentTotal', 'currencyType', 'paymentMethod', 'ops'];
+    [KEYS.numDoc, KEYS.insured, KEYS.attachment, KEYS.dateIssue, KEYS.dateEntry, KEYS.paymentNet, KEYS.paymentTotal, KEYS.currencyType, KEYS.paymentMethod, KEYS.ops];
   displayedColumnsProps =
-    ['warn:cancelled', '',        '',            '',      '',     'warn:currency',     'warn:currency',       'keyTrans',             'keyTrans',        'ops']
+    ['warn:cancelled', '', '', '', '', 'warn:currency', 'warn:currency', 'keyTrans', 'keyTrans', 'ops'];
 
-  constructor(private dialog: MatDialog, private store: InsTransAviStore) {}
+  constructor(private dialog: MatDialog, private store: InsTransAviStore) {
+  }
 
-  updateEntry(entry:InsTransAvi) {
+  updateEntry(entry: InsTransAvi) {
     openEditAddDialog(this.dialog, entry)
       .pipe(
         take(1),
         filter(val => !!val)
       )
-      .subscribe(entry => this.store.updateEntry(entry))
+      .subscribe(entry => this.store.updateEntry(entry));
   }
 
-  deleteEntry(entry:InsTransAvi) {
+  deleteEntry(entry: InsTransAvi) {
     this.store.deleteEntry(entry);
   }
 }

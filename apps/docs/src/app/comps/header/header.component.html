@@ -1,6 +1,6 @@
 <mat-toolbar color="primary">
   <mat-icon style="cursor: pointer" (click)="reload()">list</mat-icon>
-  <span style="padding: 0 10px"> {{ getTransKey(selection)}}</span>
+  <span style="padding: 0 10px"> {{ selection | transKey }}</span>
   <span class="example-spacer"></span>
   <button mat-icon-button
           (click)="addEntry()"

@@ -1,204 +1,204 @@
-import { KeyProperties } from "@tibesty/data-model";
+import { KeyProperties, KEYS } from "@tibesty/data-model";
 
 export const TRANS_KEYS: KeyProperties[] = [
   {
-    id: "about",
+    id: KEYS.about,
     title: [
       "About",
       "عنا"
     ]
   },
   {
-    id: "airplaneBodyResponsibilities",
+    id: KEYS.airplaneBodyResponsibilities,
     title: [
       "Airplane body & Responsibilities",
       "أجسام ومسؤوليات طائرات"
     ]
   },
   {
-    id: "accidentsAndCases",
+    id: KEYS.accidentsAndCases,
     title: [
       "Accidents & Cases",
       "المطالبات والحوادث"
     ]
   },
   {
-    id: "attachment",
+    id: KEYS.attachment,
     title: [
       "attachment",
       "ملحق"
     ]
   },
   {
-    id: "dateIssue",
+    id: KEYS.dateIssue,
     title: [
       "issue date",
       "تاريخ الإصدار"
     ]
   },
   {
-    id: "dataEntry",
+    id: KEYS.dateEntry,
     title: [
       "entry date",
       "تاريخ الإدخال"
     ]
   },
   {
-    id: "documentManagement",
+    id: KEYS.documentManagement,
     title: [
       "Document Management",
       "إدارة الوثائق"
     ]
   },
   {
-    id: "carBody",
+    id: KEYS.carBody,
     title: [
       "Car body",
       "أجسام سيارات"
     ]
   },
   {
-    id: "carCargoTransport",
+    id: KEYS.carCargoTransport,
     title: [
       "Car Cargo Transport",
       "شحن سيارات"
     ]
   },
   {
-    id: "carInsurance",
+    id: KEYS.carInsurance,
     title: [
       "Car Insurance",
       "تأمينات سيارات"
     ]
   },
   {
-    id: "carShipmentLand",
+    id: KEYS.carShipmentLand,
     title: [
       "Car Shipment - Land",
       "نقل سيارات - بري"
     ]
   },
   {
-    id: "carShipmentSea",
+    id: KEYS.carShipmentSea,
     title: [
       "Car Shipment - Sea",
       "نقل سيارات - بحري"
     ]
   },
   {
-    id: "cargoShipmentAir",
+    id: KEYS.cargoShipmentAir,
     title: [
       "Cargo Shipment - Air",
       "نقل بضائع - جوي"
     ]
   },
   {
-    id: "cargoShipmentLand",
+    id: KEYS.cargoShipmentLand,
     title: [
       "Cargo Shipment - Land",
       "نقل بضائع - بري"
     ]
   },
   {
-    id: "cargoShipmentSea",
+    id: KEYS.cargoShipmentSea,
     title: [
       "Cargo Shipment - Sea",
       "نقل بضائع - بحري"
     ]
   },
   {
-    id: "cash",
+    id: KEYS.cash,
     title: [
       "cash",
       "نقدًا"
     ]
   },
   {
-    id: "currencyLibyan",
+    id: KEYS.currencyLibyan,
     title: [
       "LD",
       "د.ل"
     ]
   },
   {
-    id: "currencyType",
+    id: KEYS.currencyType,
     title: [
       "currency type",
       "نوع العملة"
     ]
   },
   {
-    id: "home",
+    id: KEYS.home,
     title: [
       "Home",
       "الرئيسية"
     ]
   },
   {
-    id: "insured",
+    id: KEYS.insured,
     title: [
       "insured",
       "المؤمن له"
     ]
   },
   {
-    id: "numDoc",
+    id: KEYS.numDoc,
     title: [
       "doc #",
       "رقم الوثيقة"
     ]
   },
   {
-    id: "openCargoTransport",
+    id: KEYS.openCargoTransport,
     title: [
       "Open Cargo Transport",
       "نقل بضائع - مفتوحة"
     ]
   },
   {
-    id: "ops",
+    id: KEYS.ops,
     title: [
       "ops",
       "عمليات"
     ]
   },
   {
-    id: "paymentsAndAccounting",
+    id: KEYS.paymentsAndAccounting,
     title: [
       "Payments & Accounting",
       "الأقساط والحسابات"
     ]
   },
   {
-    id: "paymentMethod",
+    id: KEYS.paymentMethod,
     title: [
       "payment method",
       "طريقة السداد"
     ]
   },
   {
-    id: "paymentNet",
+    id: KEYS.paymentNet,
     title: [
       "net payment",
       "صافي القسط"
     ]
   },
   {
-    id: "paymentTotal",
+    id: KEYS.paymentTotal,
     title: [
       "total payment",
       "إجمالي القسط"
     ]
   },
   {
-    id: "shipBody",
+    id: KEYS.shipBody,
     title: [
       "Ship body",
       "أجسام سفن"
     ]
   },
   {
-    id: "transportAviationInsurance",
+    id: KEYS.transportAviationInsurance,
     title: [
       "Transport & Aviation Insurance",
       "تأمينات النقل والطيران"

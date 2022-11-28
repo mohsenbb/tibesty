@@ -3,6 +3,38 @@ export interface AccordionNode {
   list?: AccordionNode[];
 }
 
+export enum KEYS {
+  about = "about",
+  airplaneBodyResponsibilities = "airplaneBodyResponsibilities",
+  accidentsAndCases = "accidentsAndCases",
+  attachment = "attachment",
+  dateIssue = "dateIssue",
+  dateEntry = "dateEntry",
+  documentManagement = "documentManagement",
+  carBody = "carBody",
+  carCargoTransport = "carCargoTransport",
+  carInsurance = "carInsurance",
+  carShipmentLand = "carShipmentLand",
+  carShipmentSea = "carShipmentSea",
+  cargoShipmentAir = "cargoShipmentAir",
+  cargoShipmentLand = "cargoShipmentLand",
+  cargoShipmentSea = "cargoShipmentSea",
+  cash = "cash",
+  currencyLibyan = "currencyLibyan",
+  currencyType = "currencyType",
+  home = "home",
+  insured = "insured",
+  numDoc = "numDoc",
+  openCargoTransport = "openCargoTransport",
+  ops = "ops",
+  paymentsAndAccounting = "paymentsAndAccounting",
+  paymentMethod = "paymentMethod",
+  paymentNet = "paymentNet",
+  paymentTotal = "paymentTotal",
+  shipBody = "shipBody",
+  transportAviationInsurance = "transportAviationInsurance"
+}
+
 export interface KeyProperties {
   id: string;
   title: string[];

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { TransKeyService } from "@tibesty/translation";
+import { KEYS } from "@tibesty/data-model";
 
 @Component({
   selector: 'tibesty-root',
@@ -7,11 +7,5 @@ import { TransKeyService } from "@tibesty/translation";
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-
-  constructor(private transKeyService: TransKeyService) {
-  }
-
-  getTransKey(id: string) {
-    return this.transKeyService.getTransKey(id);
-  }
+  KEYS = KEYS;
 }

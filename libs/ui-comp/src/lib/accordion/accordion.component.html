@@ -4,7 +4,7 @@
 
     <mat-expansion-panel-header>
       <mat-panel-title>
-        {{ getTransKey(panel.id) }}
+        {{ panel.id | transKey }}
       </mat-panel-title>
     </mat-expansion-panel-header>
 
@@ -12,7 +12,7 @@
       <mat-list-option *ngFor="let elm of panel.list"
                        (click)="processSelection(elm.id)"
                        [value]="elm.id">
-        {{ getTransKey(elm.id) }}
+        {{ elm.id | transKey }}
       </mat-list-option>
     </mat-selection-list>
 

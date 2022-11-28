@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
-import { TransKeyService } from "@tibesty/translation";
 
 @Component({
   selector: 'tibesty-tbs-table',
@@ -17,9 +16,6 @@ export class TbsTableComponent implements OnInit {
 
   loader = true;
 
-  constructor(private transKeyService: TransKeyService) {
-  }
-
   ngOnInit() {
     setTimeout(() => {
       this.loader = false;
@@ -32,9 +28,5 @@ export class TbsTableComponent implements OnInit {
 
   deleteEntry(element: any) {
     this.emitDelete.emit(element);
-  }
-
-  getTransKey(id: string) {
-    return this.transKeyService.getTransKey(id);
   }
 }

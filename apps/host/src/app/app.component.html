@@ -6,27 +6,27 @@
 
       <a mat-list-item routerLink="/">
         <mat-icon>library_books</mat-icon>
-        <span>{{ getTransKey('home') }}</span>
+        <span>{{ KEYS.home | transKey }}</span>
       </a>
 
       <a mat-list-item routerLink="docs">
         <mat-icon>note</mat-icon>
-        <span>{{ getTransKey('documentManagement')}}</span>
+        <span>{{ KEYS.documentManagement | transKey }}</span>
       </a>
 
       <a mat-list-item routerLink="cases">
         <mat-icon>account_balance</mat-icon>
-        <span>{{ getTransKey('accidentsAndCases')}}</span>
+        <span>{{ KEYS.accidentsAndCases | transKey }}</span>
       </a>
 
       <a mat-list-item routerLink="accounting">
         <mat-icon>account_balance_wallet</mat-icon>
-        <span>{{ getTransKey('paymentsAndAccounting')}}</span>
+        <span>{{ KEYS.paymentsAndAccounting | transKey }}</span>
       </a>
 
       <a mat-list-item routerLink="about">
         <mat-icon>remove_red_eye</mat-icon>
-        <span>{{ getTransKey('about') }}</span>
+        <span>{{ KEYS.about | transKey }}</span>
       </a>
 
     </mat-nav-list>

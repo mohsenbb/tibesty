@@ -9,7 +9,6 @@ import { openEditAddDialog } from "../dialog-edit-add/dialog-edit-add.component"
 import { filter, Observable, take } from "rxjs";
 import { InsTransAviStore } from "@tibesty/comp-store";
 import { emptyInsTransAviEntry } from "@tibesty/data-model";
-import { TransKeyService } from "@tibesty/translation";
 
 @Component({
   selector: 'tibesty-header',
@@ -26,7 +25,6 @@ export class HeaderComponent {
   }
 
   constructor(private cd: ChangeDetectorRef,
-              private transKeyService: TransKeyService,
               private store: InsTransAviStore,
               private dialog: MatDialog) {
   }
@@ -53,9 +51,5 @@ export class HeaderComponent {
 
   reload() {
     this.store.init();
-  }
-
-  getTransKey(id: string) {
-    return this.transKeyService.getTransKey(id);
   }
 }

@@ -11,6 +11,7 @@ import { InsTransAviComponent } from "../comps/ins-trans-avi/ins-trans-avi.compo
 import { HeaderComponent } from "../comps/header/header.component";
 import { DialogEditAddComponent } from "../comps/dialog-edit-add/dialog-edit-add.component";
 import { ReactiveFormsModule } from "@angular/forms";
+import { UtilsModule } from "@tibesty/utils";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from "@angular/forms";
     MaterialModule,
     RouterModule.forChild(remoteRoutes),
     UiCompModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    UtilsModule
   ],
   providers: [],
 })
